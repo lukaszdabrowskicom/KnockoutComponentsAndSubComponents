@@ -1,0 +1,26 @@
+﻿    UserRating:
+    <span data-bind="text: userRating"></span>
+    <br />
+    Description:
+    <span data-bind="text: description"></span>
+    <br />
+
+    <div class="like-or-dislike" data-bind="visible: !chosenValue()">
+        <button data-bind="click: like">Like it</button>
+        <button data-bind="click: dislike">Dislike it</button>
+    </div>
+
+    <button data-bind="click: revertChosenValue">Revert</button>
+
+    <div class="result" data-bind="visible: chosenValue()">
+        You <strong data-bind="text: chosenValue"></strong> it.
+        And this was loaded from an external file.
+    </div>
+
+
+    <br />
+    <h1>Nested component - cornsilk</h1>
+    <br />
+    <div style="background-color: cornsilk">
+        <bla-bla-bla params="descriptionV: description, ratingV: userRating, isSubComponent: true"></bla-bla-bla>
+    </div>
